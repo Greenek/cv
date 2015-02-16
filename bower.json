@@ -1,0 +1,31 @@
+{
+  "name": "CV",
+  "version": "2.0.0",
+  "homepage": "https://github.com/Greenek/cv",
+  "authors": [
+    "Paweł Golonko <pgolonko@gmail.com>"
+  ],
+  "description": "Curricula Vitae",
+  "main": "index.html",
+  "keywords": [
+    "cv",
+    "resume",
+    "webdeveloper"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize.css": "^3.0.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.3.0",
+    "zepto": "^1.1.0"
+  }
+}

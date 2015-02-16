@@ -1,0 +1,6 @@
+.DS_Store
+assets/
+bower_components/
+node_modules/
+index.html
+*.sublime-workspace

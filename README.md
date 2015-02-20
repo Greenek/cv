@@ -1,9 +1,7 @@
-# Curricula Vitae
+# Curriculum Vitae
 ## of Paweł Golonko <hi@panzielony.pl>
 
 ***
-
-<img id="me" src="assets/images/me.jpg" alt="Paweł Golonko">
 
 # Paweł Golonko
 ## Senior Back End & Front End Web Developer
@@ -61,6 +59,9 @@ Web developer with **over 10 years experience** in creating sites and **complex 
   - fashion and graphic designers ([The Hive](http://shop.thehiveclothing.eu), [Aaaghr](http://aaaghr.com), [From Froggy With Love](http://www.fromfroggywithlove.com), [Admirable](http://admirable.co), [CustomTop](http://customtop.eu)).
 
   > *#PHP* *#Kohana* *#Wordpress* *#MySQL* *#HTML* *#CSS* *#LESS* *#Bootstrap* *#JavaScript* *#jQuery* *#PayPal* *#PayU* *#WorldPay* *#LastFm* *#PrestaShop*
+
++ #### Born
+  _1988_
 
 ***
 

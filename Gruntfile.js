@@ -74,7 +74,7 @@ module.exports = function(grunt) {
             // Set template context
             contextVariables = src.match(/# (.+)\n## (.+)/i);
 
-            context.title = 'Curricula Vitae of ' + contextVariables[1];
+            context.title = 'Curriculum Vitae of ' + contextVariables[1];
             context.title += ' • ' + contextVariables[2];
 
             return src;
@@ -87,6 +87,7 @@ module.exports = function(grunt) {
 
             var getSectionId = function(match, id) {
               key = id;
+
               return '<h3>';
             };
 
@@ -97,7 +98,7 @@ module.exports = function(grunt) {
               if (i === 0) {
                 key = 'header';
               } else {
-                sections[i].replace(/<h3 id="([a-z]+)(-[a-z-]+)?">/, getSectionId.bind(this));
+                section = section.replace(/<h3 id="([a-z]+)(-[a-z-]+)?">/, getSectionId.bind(this));
               }
 
               context.sections[key] = section;

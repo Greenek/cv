@@ -3,6 +3,11 @@ module.exports = function(grunt) {
 
   var pkg = require('./package.json');
 
+  // Initialize default options
+  grunt.option.init({
+    staging: false
+  });
+
   // Load grunt tasks
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-contrib-clean');
@@ -27,13 +32,13 @@ module.exports = function(grunt) {
         assets: 'public/assets',
         development: grunt.option('no-staging'),
         flatten: true,
-        layout: 'default.hbs',
+        layout: 'default-layout.hbs',
         layoutdir: 'src/views/layouts/',
         marked: {
           pedantic: true,
           smartypants: true
         },
-        partials: 'src/views/partials/**/*.hbs',
+        partials: 'src/views/partials/**/*.md',
         production: grunt.option('staging')
       },
       pages: {

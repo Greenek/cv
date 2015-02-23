@@ -1,0 +1,82 @@
+/* -- Skills */
+
+/**
+ * Yey, Base16 & Spacegray! ♥
+ * http://chriskempson.github.io/base16/
+ * https://github.com/kkga/spacegray
+ */
+
+#skills {
+	@start-color: #2b303b;
+	@end-color: lighten(@start-color, 10%);
+	background-color: @start-color;
+	background-image: linear-gradient(to bottom, @start-color, @end-color);
+	color: #e0e0e0;
+	padding: 70px 0;
+
+	h3 {
+		color: #f0f2f7;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	strong {
+		color: #f5f5f5;
+	}
+
+	.wrapper {
+		width: 75%;
+
+		> ul {
+			list-style-type: none;
+			margin: 0 -20px;
+			padding: 0;
+
+			h4 {
+				border-bottom: 4px solid #38ae9c;
+				color: #f4f4f4;
+				display: inline-block;
+				font-size: 21px;
+				font-weight: 800;
+				margin-bottom: 22px;
+				padding-bottom: 0;
+			}
+
+			> li {
+				margin-bottom: 20px;
+				padding: 0 20px;
+
+				ul {
+					list-style-type: none;
+					padding-left: 1em;
+
+					li {
+						line-height: 1.5em;
+						margin: 7px 0;
+
+						&:before {
+							color: lighten(@start-color, 30%);
+							content: '•';
+							float: left;
+							margin-left: -1em;
+						}
+					}
+				}
+
+				&:first-child {
+					font-size: 20px;
+
+					h4 {
+						border-bottom-width: 8px;
+						font-size: 28px;
+					}
+
+					& ~ li {
+						float: left;
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}

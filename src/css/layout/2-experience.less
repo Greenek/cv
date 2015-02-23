@@ -1,0 +1,151 @@
+/* -- Experience */
+
+@text-color: #6b7b86;
+@link-color: #e05c41;
+@bg-color: #f0f2f7;
+
+#experience {
+	background-color: @bg-color;
+	padding: 140px 0 60px;
+	text-align: center;
+
+	h3 {
+		background-color: @bg-color;
+		position: relative;
+		z-index: 100;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	.wrapper > ul {
+		@horizontal-bar-color: #d4dee9;
+
+		.clearfix();
+		margin: -180px auto 20px;
+		padding-top: 140px;
+		position: relative;
+		width: 90%;
+		z-index: 50;
+
+		&:before {
+			background: @horizontal-bar-color;
+			content: ' ';
+			display: block;
+			height: 100%;
+			left: 50%;
+			margin-left: -2px;
+			position: absolute;
+			top: 0;
+			width: 4px;
+		}
+
+		&:after {
+			.fa;
+			.fa-lg;
+			background-color: @horizontal-bar-color;
+			border-radius: 50%;
+			color: #e05c41;
+			content: @fa-var-map-marker;
+			display: block;
+			height: 50px;
+			left: 50%;
+			line-height: 50px;
+			margin-left: -25px;
+			position: absolute;
+			top: -25px;
+			width: 50px;
+		}
+
+		> li {
+			box-sizing: border-box;
+			padding: 0 20px;
+			width: 50%;
+
+			h4 {
+				font-size: 24px;
+				font-weight: 800;
+				margin-bottom: 0;
+				position: relative;
+
+				&:after {
+					background-color: @horizontal-bar-color;
+					border-radius: 50%;
+					content: ' ';
+					display: block;
+					height: 12px;
+					margin-top: -6px;
+					position: absolute;
+					top: 50%;
+					width: 12px;
+				}
+
+				+ p {
+					color: #aeb9c0;
+					font-size: 14px;
+					margin: 0 0 22px;
+				}
+			}
+
+			li,
+			p {
+				color: @text-color;
+				line-height: 24px;
+				margin: 12px 0;
+
+				a {
+					color: @link-color;
+					font-weight: 600;
+					text-decoration: none;
+				}
+			}
+
+			blockquote {
+				color: lighten(@text-color, 15%);
+				font-size: 14px;
+				line-height: 22px;
+				margin: 22px 0 0;
+
+				p {
+					color: inherit;
+					line-height: inherit;
+				}
+			}
+
+			&:nth-child(odd) {
+				clear: left;
+				float: left;
+				margin-bottom: 40px;
+				text-align: right;
+
+				h4 {
+					&:after {
+						left: 100%;
+						margin-left: 14px;
+					}
+				}
+			}
+
+			&:nth-child(even) {
+				clear: right;
+				float: right;
+				margin-top: 125px;
+				text-align: left;
+
+				h4 {
+					&:after {
+						right: 100%;
+						margin-right: 14px;
+					}
+				}
+			}
+
+			&:last-child {
+				clear: both;
+				float: none;
+			}
+		}
+	}
+}

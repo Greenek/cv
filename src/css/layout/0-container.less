@@ -1,0 +1,12 @@
+#container {
+	opacity: 0;
+
+	.no-js & {
+		animation: fadein 1s 1s forwards;
+	}
+
+	.js .loaded & {
+		opacity: 1;
+		transition: opacity 1s ease;
+	}
+}

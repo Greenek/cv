@@ -1,5 +1,5 @@
-# Curriculum Vitae
-## of Paweł Golonko <hi@panzielony.pl>
+# Resume
+## Paweł Golonko <pgolonko@gmail.com>
 
 ***
 
@@ -8,8 +8,8 @@
 
 Web developer with **over 10 years experience** in creating sites and **complex web applications**. Familiar with all phases of software development life cycle. Enthusiast of new technologies and clean code.
 
-+ <span class="icon home">[panzielony.pl](http://panzielony.pl)</span>
-+ <span class="icon email">[hi@panzielony.pl](mailto:hi@panzielony.pl)</span>
++ <span class="icon home">[greenek.com](http://greenek.com)</span>
++ <span class="icon email">[pgolonko@gmail.com](mailto:pgolonko@gmail.com)</span>
 + <span class="icon phone">[(+48) 696-962-899](tel:48696962899)</span>
 
 ***
@@ -69,27 +69,27 @@ Web developer with **over 10 years experience** in creating sites and **complex 
 
 + #### Proficient in
 
-  - __back end developing__ using object-oriented [PHP](#PHP) 5,
-  - __front end coding__ with semantic [HTML](#HTML) (compliant with W3C standards), responsive [CSS](#CSS) styles and [JavaScript](#JavaScript),
+  - __back end developing__ using object-oriented PHP 5,
+  - __front end coding__ with semantic HTML (compliant with W3C standards), responsive CSS styles and JavaScript,
   - writing __clean and readable code__ using __design patterns__,
-  - prototyping __efficient__ and __normalized__ [MySQL](#MySQL) databases,
-  - implementing [REST](#REST) and [WSDL](#WSDL) __web services__ servers and clients,
-  - __continuous delivery__ techniques and tools ([Git](#Git), [NodeJS](#NodeJS), [Grunt](#Grunt), [JSHint](#JSHint), [Vagrant](#Vagrant)),
-  - wide range of __frameworks__ ([Kohana](#Kohana), [AngularJS](#AngularJS), [jQuery](#jQuery), [Bootstrap](#Bootstrap)), __tools__ ([LESS](#LESS), [Cron](#Cron)) and __APIs__ ([PayPal](#PayPal), [PayU](#PayU), [WorldPay](#WorldPay), [Facebook](#Facebook), [Last.fm](#LastFm)),
+  - prototyping __efficient__ and __normalized__ MySQL databases,
+  - implementing REST and WSDL __web services__ servers and clients,
+  - __continuous delivery__ techniques and tools (Git, NodeJS, Grunt, JSHint, Vagrant),
+  - wide range of __frameworks__ (Kohana, AngularJS, jQuery, Bootstrap), __tools__ (LESS, Cron) and __APIs__ (PayPal, PayU, WorldPay, Facebook, Last.fm),
   - solving __complex problems__,
   - __software__: Sublime Text, Terminal, Sequel Pro, Slack, Photoshop,
   - __operating systems__: OSX, Linux (Arch Linux, Ubuntu).
 
-+ #### Good knowledge of
++ #### Knowledge of
 
   - __debugging and profiling code__ with XDebug,
-  - __open source platforms__ ([Wordpress](#Wordpress), [Moodle](#Moodle), [PrestaShop](#PrestaShop)),
+  - __open source platforms__ (Wordpress, Moodle, PrestaShop),
   - prototyping __accessible and user-friendly interfaces__.
 
-+ #### Basic knowledge of
++ #### Basics
 
-  - __programming in__ [Bash](#Bash), [Java](#Java), [Ruby on Rails](#RubyOnRails),
-  - __image processing__ with [JavaCV](#JavaCV),
+  - __programming in__ Bash, Java, Ruby on Rails,
+  - __image processing__ with JavaCV,
   - __unit testing__ using PHPUnit.
 
 + #### Social skills
@@ -97,7 +97,7 @@ Web developer with **over 10 years experience** in creating sites and **complex 
   - very good __communication__ and __interpersonal__ skills,
   - __reliable__ and __focused__ on providing high-quality code,
   - __fast learner__ and always willing to __share the knowledge__,
-  - ability of __navigating__ and __understanding__ unfamiliar and poorly documented huge projects, gained by working with [Moodle](#Moodle) (+1M lines of code),
+  - ability of __navigating__ and __understanding__ unfamiliar and poorly documented huge projects, gained by working with Moodle (+1M lines of code),
   - easily __adapt__ to a fast-paced environment.
 
 + #### Languages
@@ -132,9 +132,8 @@ Web developer with **over 10 years experience** in creating sites and **complex 
 ### Other activities and hobbies
 
 + #### Polish Siberian Session
-  _since 2013_
 
-  Branding and managing of organization of a series of tournaments included within Polish Rolling League.
+  Branding and managing of organization a series of tournaments included within Polish Rolling League.
 
 + #### Audio-Visual Art
 

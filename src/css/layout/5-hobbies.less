@@ -1,0 +1,73 @@
+/* -- Hobbies */
+
+#hobbies {
+	background-attachment: fixed;
+	background-image: url("images/hobbies.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover !important;
+	color: #fff;
+	font-size: 18px;
+	min-height: 100vh;
+	padding: 40px 20px;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	&:before {
+		@start-color: rgba(168, 116, 72, 0.6);
+		@end-color: rgba(16, 66, 20, 0.6);
+		background-color: @start-color;
+		background-image: linear-gradient(to right, @start-color, @end-color);
+		content: ' ';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.wrapper {
+		text-align: left;
+		width: 80%;
+		z-index: 10;
+	}
+
+	h3 {
+		color: #fff;
+		margin-bottom: 16px;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+
+		li {
+
+		}
+
+		h4 {
+			color: #fff;
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 6px;
+		}
+
+		a {
+			border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+			color: inherit;
+			display: inline-block;
+			font-weight: 600;
+			padding-bottom: 2px;
+			text-decoration: none;
+
+			&:hover {
+				border-bottom-color: rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+/* -- Slides */
+
+.slide {
+	background-color: #fff;
+	.clearfix();
+	min-height: 100vh;
+	position: relative;
+
+	h3:first-child {
+		margin-top: 0;
+	}
+}
+
+.fit {
+	align-items: center;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+}
+
+/* -- Wrapper */
+
+.wrapper {
+	.clearfix();
+	margin: 0 auto;
+	max-width: 1120px;
+	position: relative;
+	width: 96%;
+}
+
+/* -- Spinner */
+
+@spinner-size: 40px;
+
+.spinner {
+	animation: scaleout 1s infinite ease-in-out;
+	background-color: darken(@body-bg, 20%);
+	border-radius: 100%;
+	height: @spinner-size;
+	left: 50%;
+	margin-left: (@spinner-size / -2);
+	margin-top: (@spinner-size / -2);
+	opacity: 1;
+	position: fixed;
+	top: 50%;
+	width: @spinner-size;
+
+	.loaded > & {
+		animation: none;
+		transition: opacity 1s ease;
+	}
+}

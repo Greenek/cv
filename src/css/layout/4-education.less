@@ -1,0 +1,56 @@
+/* -- Education */
+
+@text-color: #6b7b86;
+@link-color: #e05c41;
+@bg-color: #f0f2f7;
+
+#education {
+	background-color: @bg-color;
+	color: @text-color;
+	padding: 70px 0;
+
+	h3 {
+		text-align: center;
+	}
+
+	.wrapper {
+		width: 75%;
+
+		> ul {
+			list-style-type: none;
+
+			li {
+				margin: 10px 0;
+			}
+
+			h4 {
+				font-weight: 600;
+				margin-bottom: 8px;
+
+				+ p {
+					color: #aeb9c0;
+					font-size: 14px;
+					margin: 0 0 22px;
+
+					+ blockquote {
+						font-size: 28px;
+						font-weight: 300;
+						padding-left: 3em;
+					}
+				}
+			}
+
+			blockquote:last-child {
+				color: lighten(@text-color, 25%);
+				font-size: 14px;
+				line-height: 22px;
+				margin: 22px 0 0;
+
+				p {
+					color: inherit;
+					line-height: inherit;
+				}
+			}
+		}
+	}
+}

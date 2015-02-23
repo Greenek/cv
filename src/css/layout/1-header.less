@@ -1,0 +1,139 @@
+/* -- Header */
+
+#header {
+	background-attachment: fixed;
+	background-image: url("images/intro.jpg");
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover !important;
+	color: #fff;
+	font-size: 22px;
+	min-height: 100vh;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	&:before {
+		@start-color: rgba(72, 128, 168, 0.6);
+		@end-color: rgba(26, 158, 35, 0.6);
+		background-color: @start-color;
+		background-image: linear-gradient(to right, @start-color, @end-color);
+		content: ' ';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.js & {
+		// clip-path: circle(0px at center);
+		transition: 1s ease;
+	}
+
+	.js .loaded & {
+		// clip-path: circle(80% at center);
+		height: 100vh;
+	}
+
+	.wrapper {
+		text-align: center;
+		width: 85%;
+		z-index: 10;
+	}
+
+	h1,
+	h2 {
+		color: inherit;
+		margin: 0 auto;
+	}
+
+	h1 {
+		font-size: 72px;
+		font-weight: 800;
+		letter-spacing: 2px;
+		margin-bottom: 0;
+	}
+
+	h2 {
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 24px;
+		margin-bottom: 50px;
+	}
+
+	p {
+		line-height: 30px;
+		margin: 0 auto 50px;
+		width: 70%;
+	}
+
+	ul {
+		font-size: 18px;
+		list-style-type: none;
+		margin-bottom: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			margin: 0 12px;
+		}
+
+		a {
+			color: rgba(255, 255, 255, 0.75);
+		}
+	}
+
+	a {
+		color: #f9f9f9;
+		text-decoration: none;
+		transition: color .2s ease;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	.icon {
+		&:before {
+			.fa;
+			margin-right: 7px;
+			vertical-align: text-bottom;
+		}
+
+		&.home:before {
+			content: @fa-var-home;
+			margin-top: 2px;
+		}
+
+		&.email:before {
+			content: @fa-var-at;
+		}
+
+		&.phone:before {
+			content: @fa-var-phone;
+		}
+	}
+}
+
+/* Photo */
+
+#me {
+	@me-size: 250px;
+	background-color: #fff;
+	border: 7px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	display: block;
+	height: @me-size;
+	margin: 0 auto 1em;
+	overflow: hidden;
+	width: @me-size;
+	z-index: 10;
+
+	img {
+		max-height: 100%;
+		width: 100%;
+	}
+}

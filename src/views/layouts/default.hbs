@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>{{ this.page.title }}</title>
+  <meta name="description" content="{{ this.page.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:300,500,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="{{assets}}/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+    document.documentElement.className = 'js';
+  </script>
+  {{#if production}}
+    {{> google-analytics }}
+  {{/if}}
+</head>
+<body>
+  <div id="container">
+    {{> body}}
+  </div>
+  <script src="{{assets}}/scripts.js"></script>
+  {{#if development}}
+  <script src="//localhost:35729/livereload.js"></script>
+  {{/if}}
+</body>
+</html>

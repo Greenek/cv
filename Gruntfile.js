@@ -4,15 +4,71 @@ module.exports = function(grunt) {
   var pkg = require('./package.json');
 
   // Load grunt tasks
+  grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-markdown');
+  grunt.loadNpmTasks('grunt-dom-massager');
+  grunt.loadNpmTasks('grunt-prettify');
+
+  // Get target
+  var target = grunt.option('staging') || 'dev';
 
   // Tasks config
   grunt.initConfig({
     pkg: pkg,
+
+    assemble: {
+      options: {
+        assets: 'public/assets',
+        development: grunt.option('no-staging'),
+        flatten: true,
+        layout: 'default.hbs',
+        layoutdir: 'src/views/layouts/',
+        marked: {
+          pedantic: true,
+          smartypants: true
+        },
+        partials: 'src/views/partials/**/*.hbs',
+        production: grunt.option('staging')
+      },
+      pages: {
+        files: {
+          'public/': ['src/views/pages/*.hbs']
+        }
+      }
+    },
+
+    clean: {
+      build: ['public'],
+      tmp: ['.tmp']
+    },
+
+    concat: {
+      readme: {
+        options: {
+          separator: '\n\n***\n\n'
+        },
+        files: {
+          'README.md': ['src/md/*.md']
+        }
+      }
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: '8000',
+          hostname: 'cv.dev',
+          base: ['public', '.'],
+          open: 'Google Chrome'
+        }
+      }
+    },
 
     copy: {
       fontawesome: {
@@ -20,7 +76,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'bower_components/font-awesome/fonts/',
           src: ['*'],
-          dest: 'assets/fonts/'
+          dest: 'public/assets/fonts/'
         }]
       },
       images: {
@@ -28,8 +84,30 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src/images/',
           src: ['**/*'],
-          dest: 'assets/images/'
+          dest: 'public/assets/images/'
         }]
+      }
+    },
+
+    'dom_massager': {
+      options: {
+        writeDom: true,
+        selectors: {
+          'a[href^="http"]': {
+            action: 'attr',
+            input: {
+              'rel': 'nofollow'
+            }
+          },
+          'h1,h2,h3,h4': {
+            action: 'removeAttr',
+            input: ['id']
+          }
+        }
+      },
+      files: {
+        src: 'public/index.html',
+        dest: '.tmp/'
       }
     },
 
@@ -47,81 +125,31 @@ module.exports = function(grunt) {
           ]
         },
         files: {
-          'assets/style.css': [
+          'public/assets/style.css': [
             'src/css/style.less'
           ]
         }
       }
     },
 
-    markdown: {
-      resume: {
-        files: {
-          'index.html': [
-            'readme.md'
-          ]
-        },
-        options: {
-          template: 'src/resume.jst',
-          preCompile: function(src, context) {
-            var start;
-            var contextVariables;
-
-            // Get start offset
-            start = src.match(/\*{3}/i);
-            src = src.substr(start.index + start[0].length);
-
-            // Set template context
-            contextVariables = src.match(/# (.+)\n## (.+)/i);
-
-            context.title = 'Curriculum Vitae of ' + contextVariables[1];
-            context.title += ' • ' + contextVariables[2];
-
-            return src;
-          },
-          postCompile: function(src, context) {
-            var sections;
-
-            sections = src.split('\n<hr>\n');
-            context.sections = {};
-
-            var getSectionId = function(match, id) {
-              key = id;
-
-              return '<h3>';
-            };
-
-            for (var i = 0, len = sections.length; i < len; ++i) {
-              var key;
-              var section = sections[i];
-
-              if (i === 0) {
-                key = 'header';
-              } else {
-                section = section.replace(/<h3 id="([a-z]+)(-[a-z-]+)?">/, getSectionId.bind(this));
-              }
-
-              context.sections[key] = section;
-            }
-
-            return src;
-          },
-          markdownOptions: {
-            gfm: true,
-            highlight: 'manual'
-          }
-        }
+    prettify: {
+      options: {
+        config: '.jsbeautifyrc'
+      },
+      index: {
+        src: '.tmp/index.html',
+        dest: 'public/index.html'
       }
     },
 
     uglify: {
       app: {
         options: {
-          sourceMap: true,
-          sourceMapName: 'assets/scripts.js.map'
+          sourceMap: grunt.option('no-staging'),
+          sourceMapName: 'public/assets/scripts.js.map'
         },
         files: {
-          'assets/scripts.js': [
+          'public/assets/scripts.js': [
             'bower_components/zepto/zepto.js',
             'src/js/app.js'
           ]
@@ -135,11 +163,14 @@ module.exports = function(grunt) {
       },
       content: {
         files: [
-          'README.md',
-          'src/resume.jst'
+          'src/md/*.md',
+          'src/views/**/*.hbs'
         ],
         tasks: [
-          'markdown'
+          'concat:readme',
+          'assemble',
+          'dom_massager',
+          'prettify'
         ]
       },
       gruntfile: {
@@ -149,6 +180,17 @@ module.exports = function(grunt) {
         },
         tasks: [
           'build'
+        ]
+      },
+      less: {
+        files: [
+          'src/css/**/*.less'
+        ],
+        options: {
+          reload: false
+        },
+        tasks: [
+          'less'
         ]
       },
       scripts: {
@@ -161,10 +203,7 @@ module.exports = function(grunt) {
       },
       styles: {
         files: [
-          'src/css/**/*.less'
-        ],
-        tasks: [
-          'less'
+          'public/assets/*.css'
         ]
       }
     }
@@ -176,14 +215,20 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'clean',
     'assets',
+    'concat',
     'less',
-    'markdown',
-    'uglify'
+    'assemble',
+    'uglify',
+    'dom_massager',
+    'prettify',
+    'clean:tmp'
   ]);
 
   grunt.registerTask('dev', [
     'build',
+    'connect',
     'watch'
   ]);
 

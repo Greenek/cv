@@ -18,7 +18,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-dom-massager');
-  grunt.loadNpmTasks('grunt-prettify');
 
   // Get target
   var target = grunt.option('staging') || 'dev';
@@ -115,7 +114,7 @@ module.exports = function(grunt) {
       },
       files: {
         src: 'public/index.html',
-        dest: '.tmp/'
+        dest: 'public/'
       }
     },
 
@@ -140,16 +139,6 @@ module.exports = function(grunt) {
             'src/css/markdown.less'
           ]
         }
-      }
-    },
-
-    prettify: {
-      options: {
-        config: '.jsbeautifyrc'
-      },
-      index: {
-        src: '.tmp/index.html',
-        dest: 'public/index.html'
       }
     },
 
@@ -180,8 +169,7 @@ module.exports = function(grunt) {
         tasks: [
           'concat:readme',
           'assemble',
-          'dom_massager',
-          'prettify'
+          'dom_massager'
         ]
       },
       gruntfile: {
@@ -233,7 +221,6 @@ module.exports = function(grunt) {
     'assemble',
     'uglify',
     'dom_massager',
-    'prettify',
     'clean:tmp'
   ]);
 

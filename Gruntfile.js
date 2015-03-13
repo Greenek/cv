@@ -135,6 +135,9 @@ module.exports = function(grunt) {
         files: {
           'public/assets/style.css': [
             'src/css/style.less'
+          ],
+          'public/assets/markdown.css': [
+            'src/css/markdown.less'
           ]
         }
       }

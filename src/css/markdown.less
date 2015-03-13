@@ -1,0 +1,175 @@
+@import (inline) "normalize.css/normalize.css";
+
+/**
+ * Colors pallete:
+ *
+ * Preap markdown theme for Sublime Text
+ * by Mattia Astorino
+ *
+ * https://github.com/equinusocio/preap
+ */
+@background-color: #292b2c;
+@text-color: #d9d9d9;
+
+@heading-color: #f18260;
+@string-color: #92bfbf;
+@link-color: #b4d388;
+@list-color: #bddcdc;
+
+body {
+	background: @background-color;
+	color: @text-color;
+	font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+	font-size: 16px;
+	line-height: 1.6em;
+}
+
+/* Layout */
+
+#container {
+	margin: 0 auto;
+	padding: 30px 0;
+	width: 600px;
+}
+
+.slide {
+	&:not(:last-child) {
+		&:after {
+			content: '***';
+			display: block;
+			margin: 1em 0;
+		}
+	}
+}
+
+/* Headers */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: @heading-color;
+	font-size: 1em;
+	font-weight: normal;
+	margin: 0;
+}
+
+.headers(6, '#');
+
+.headers(@n, @content, @i: 1) when (@i =< @n) {
+	h@{i}:before {
+		content: '@{content} ';
+	}
+	.headers(@n, '@{content}#', (@i + 1));
+}
+
+/* Paragraphs */
+
+p,
+blockquote,
+ul,
+ol {
+	margin: 1em 0;
+}
+
+blockquote {
+	&:before {
+		content: '>';
+		float: left;
+		margin-right: .5em;
+	}
+
+	em {
+		&:before,
+		&:after {
+			content: '*'
+		}
+	}
+}
+
+/* Lists */
+
+ul,
+ol {
+	list-style-type: none;
+	padding: 0;
+
+	li {
+		margin: 0;
+	}
+}
+
+ul {
+	> li {
+		margin-left: 1em;
+
+		&:before {
+			content: '+';
+			float: left;
+			margin-left: -1em;
+		}
+
+		> ul {
+			> li {
+				&:before {
+					content: '-';
+				}
+
+				strong {
+					&:before,
+					&:after {
+						content: '__';
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Inline elements */
+
+a {
+	color: @string-color;
+	text-decoration: none;
+
+	&:hover {
+		color: darken(@string-color, 20%);
+	}
+
+	&:before,
+	&:after {
+		color: @link-color;
+	}
+
+	&:before {
+		content: '[';
+	}
+
+	&:after {
+		content: '](' attr(href) ')';
+	}
+}
+
+strong {
+	font-weight: normal;
+
+	&:before,
+	&:after {
+		content: '**';
+	}
+}
+
+em {
+	font-style: normal;
+
+	&:before,
+	&:after {
+		content: '_';
+	}
+}
+
+img {
+	display: none;
+}

@@ -75,6 +75,14 @@
     var loaded;
     var slide;
     var spinner;
+    var about;
+
+    // Print some info for curious
+    about = document.getElementsByTagName('html')[0].childNodes[0];
+
+    if (about.nodeType === 8) {
+      console.info(about.nodeValue);
+    }
 
     // Create body spinner
     spinner = $('<div />', {

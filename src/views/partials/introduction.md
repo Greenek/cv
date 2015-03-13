@@ -10,4 +10,6 @@ https://github.com/greenek/cv
 | |___| . |  _| -_| -_|   | -_| '_|
 |_____|_  |_| |___|___|_|_|___|_,_|2015
       |___|
+
+P.S. looking for developer-friendly design? Try setMarkdownMode(true) ;)
 -->

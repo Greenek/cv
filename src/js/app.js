@@ -12,6 +12,9 @@
   // Bind onScroll event
   _window.on('scroll', onScroll);
 
+  // Bind setMarkdownMode function
+  window.setMarkdownMode = setMarkdownMode;
+
   // Register getBackgroundImage function
   $.extend($.fn, {
     backgroundImage: getBackgroundImage
@@ -186,4 +189,33 @@
   function onScroll(event) {
 
   }
+
+  /**
+   * Toggle current stylesheet between `style` and `markdown`.
+   */
+  function setMarkdownMode(state) {
+    var style;
+    var href;
+
+    // Set style name
+    style = (state !== false) ? 'markdown' : 'default';
+    setStyle(style);
+  }
+
+  function setStyle(style) {
+    var styleLink;
+
+    styleLink = $('head > link[data-style="' + style + '"][rel~="alternate"]');
+
+    // If style exist and is not enabled...
+    if (styleLink.length) {
+      $('head > link[data-style]:not([rel~="alternate"])').attr('rel', 'alternate stylesheet');
+      styleLink.attr('rel', 'stylesheet');
+
+      window.setTimeout(function() {
+        body.hide().show(0);
+      }, 100);
+    }
+  }
+
 })(Zepto);

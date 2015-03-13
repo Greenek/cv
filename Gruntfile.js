@@ -70,7 +70,10 @@ module.exports = function(grunt) {
           port: '8000',
           hostname: 'cv.dev',
           base: ['public', '.'],
-          open: 'Google Chrome'
+          livereload: true,
+          open: {
+            appName: 'Google Chrome'
+          }
         }
       }
     },

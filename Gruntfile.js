@@ -16,7 +16,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-dom-massager');
 
@@ -95,14 +94,6 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      fontawesome: {
-        files: [{
-          expand: true,
-          cwd: 'bower_components/font-awesome/fonts/',
-          src: ['*'],
-          dest: 'public/assets/fonts/'
-        }]
-      },
       images: {
         files: [{
           expand: true,
@@ -148,29 +139,15 @@ module.exports = function(grunt) {
             })
           ]
         },
-        files: {
-          'public/assets/style.css': [
-            'src/css/style.less'
-          ],
-          'public/assets/markdown.css': [
-            'src/css/markdown.less'
-          ]
-        }
-      }
-    },
-
-    uglify: {
-      app: {
-        options: {
-          sourceMap: grunt.option('no-staging'),
-          sourceMapName: 'public/assets/scripts.js.map'
-        },
-        files: {
-          'public/assets/scripts.js': [
-            'bower_components/zepto/zepto.js',
-            'src/js/app.js'
-          ]
-        }
+        files: [
+          {
+            expand: true,
+            cwd: 'src/css/',
+            src: ['*.less'],
+            dest: 'public/assets/',
+            ext: '.css'
+          }
+        ],
       }
     },
 
@@ -214,7 +191,6 @@ module.exports = function(grunt) {
           'src/js/**/*.js'
         ],
         tasks: [
-          'uglify'
           'browserify'
         ]
       },
@@ -227,7 +203,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('assets', [
-    'copy:fontawesome',
     'copy:images'
   ]);
 
@@ -238,7 +213,6 @@ module.exports = function(grunt) {
     'browserify',
     'less',
     'assemble',
-    'uglify',
     'dom_massager',
     'clean:tmp'
   ]);

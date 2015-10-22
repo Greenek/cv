@@ -34,7 +34,12 @@ export function run() {
     let style = elem.currentStyle || window.getComputedStyle(elem, false);
 
     if (style.backgroundImage.slice(0, 3) === 'url') {
-      style = style.backgroundImage.slice(5, -2);
+      style = style.backgroundImage.slice(4, -1);
+
+      if (style[0] === '\'' || style[0] === '"') {
+        style = style.slice(1, -1);
+      }
+
       style = new ImageLoader(style);
       loadingQueue.push(style.promise);
     }

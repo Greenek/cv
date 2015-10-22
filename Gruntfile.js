@@ -10,6 +10,7 @@ module.exports = function(grunt) {
 
   // Load grunt tasks
   grunt.loadNpmTasks('assemble');
+  grunt.loadNpmTasks('grunt-browserify');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
@@ -43,6 +44,22 @@ module.exports = function(grunt) {
       pages: {
         files: {
           'public/': ['src/views/pages/*.hbs']
+        }
+      }
+    },
+
+    browserify: {
+      dist: {
+        files: {
+          'public/assets/app.js': 'src/js/app.js'
+        },
+        options: {
+          browserifyOptions: {
+            debug: grunt.option('no-staging')
+          },
+          transform: [
+            ['babelify', {'stage': 0}]
+          ]
         }
       }
     },
@@ -217,6 +234,7 @@ module.exports = function(grunt) {
     'clean',
     'assets',
     'concat',
+    'browserify',
     'less',
     'assemble',
     'uglify',

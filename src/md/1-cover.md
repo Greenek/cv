@@ -1,5 +1,5 @@
 # Paweł Golonko
-## Senior Front End Web Developer
+### Senior Front End Web Developer
 
 Web developer with **over 10 years experience** in creating sites and **complex web applications**. Familiar with all phases of software development life cycle. Enthusiast of new technologies and clean code.
 

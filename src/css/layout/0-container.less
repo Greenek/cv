@@ -1,12 +1,78 @@
-#container {
-	opacity: 0;
-
-	.no-js & {
-		animation: fadein 1s 1s forwards;
+body {
+	&:after {
+		.fa;
+		.fa-3x;
+		animation: fa-spin 1s infinite ease;
+		color: rgba(0,0,0,0.1);
+		content: @fa-var-circle-o-notch;
+		left: 50%;
+		pointer-events: none;
+		position: fixed;
+		top: 50%;
+		z-index: 100;
 	}
 
+	&.loaded {
+		&:after {
+			opacity: 0;
+			transition: opacity 1s ease;
+		}
+	}
+}
+
+#container {
+	opacity: 0;
+	position: relative;
+
+	.no-js &,
 	.js .loaded & {
-		opacity: 1;
-		transition: opacity 1s ease;
+		animation: fadein 1s 0.2s forwards;
+	}
+}
+
+/* GitHub ribbon */
+
+.ribbon {
+	background-color: rgba(0,0,0,0.2);
+	color: #fff;
+	font-family: @font-family-serif;
+	font-size: 11px;
+	font-weight: 800;
+	overflow: hidden;
+	padding: 6px 0;
+	position: fixed;
+	right: -45px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	top: 40px;
+	transform: rotate(45deg);
+	white-space: nowrap;
+	width: 200px;
+	z-index: 20;
+
+	.fa {
+		font-size: 16px;
+		margin-right: 3px;
+		vertical-align: text-bottom;
+	}
+}
+
+#footer {
+	background-color: rgba(0,0,0,0.1);
+	bottom: 0;
+	color: rgba(255,255,255,0.5);
+	font-size: 11px;
+	font-weight: 600;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	z-index: 10;
+
+	a {
+		border-bottom: 1px solid rgba(255,255,255,0.5);
+		color: #fff;
+		text-decoration: none;
 	}
 }

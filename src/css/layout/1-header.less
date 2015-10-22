@@ -16,6 +16,7 @@
 	&:before {
 		@start-color: rgba(72, 128, 168, 0.6);
 		@end-color: rgba(26, 158, 35, 0.6);
+
 		background-color: @start-color;
 		background-image: linear-gradient(to right, @start-color, @end-color);
 		content: ' ';
@@ -28,17 +29,8 @@
 		z-index: 1;
 	}
 
-	.js & {
-		// clip-path: circle(0px at center);
-		transition: 1s ease;
-	}
-
-	.js .loaded & {
-		// clip-path: circle(80% at center);
-		height: 100vh;
-	}
-
 	.wrapper {
+		margin: 30px 0;
 		text-align: center;
 		width: 85%;
 		z-index: 10;
@@ -96,8 +88,10 @@
 	}
 
 	.icon {
+		.fa;
+		.fa-fw;
+
 		&:before {
-			.fa;
 			margin-right: 7px;
 			vertical-align: text-bottom;
 		}
@@ -107,12 +101,12 @@
 			margin-top: 2px;
 		}
 
-		&.email:before {
+		&.at:before {
 			content: @fa-var-at;
 		}
 
-		&.phone:before {
-			content: @fa-var-phone;
+		&.linkedin:before {
+			content: @fa-var-linkedin;
 		}
 	}
 }
@@ -121,6 +115,7 @@
 
 #me {
 	@me-size: 250px;
+
 	background-color: #fff;
 	border: 7px solid #fff;
 	border-radius: 50%;

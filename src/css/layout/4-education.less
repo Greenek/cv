@@ -1,10 +1,10 @@
 /* -- Education */
 
-@text-color: #6b7b86;
-@link-color: #e05c41;
-@bg-color: #f0f2f7;
-
 #education {
+	@text-color: #6b7b86;
+	@link-color: #e05c41;
+	@bg-color: #f0f2f7;
+
 	background-color: @bg-color;
 	color: @text-color;
 	padding: 70px 0;
@@ -28,11 +28,12 @@
 				margin-bottom: 8px;
 
 				+ p {
-					color: #aeb9c0;
+					color: lighten(@text-color, 20%);
 					font-size: 14px;
 					margin: 0 0 22px;
 
 					+ blockquote {
+						color: darken(@text-color, 15%);
 						font-size: 28px;
 						font-weight: 300;
 						padding-left: 3em;

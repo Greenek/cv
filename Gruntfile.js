@@ -139,12 +139,12 @@ module.exports = function(grunt) {
       development: {
         options: {
           paths: [
-            'bower_components',
+            'node_modules',
             'src/css'
           ],
           plugins: [
             new(require('less-plugin-autoprefix'))({
-              browsers: ["last 2 versions"]
+              browsers: ['last 2 versions']
             })
           ]
         },
@@ -215,6 +215,7 @@ module.exports = function(grunt) {
         ],
         tasks: [
           'uglify'
+          'browserify'
         ]
       },
       styles: {

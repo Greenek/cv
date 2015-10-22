@@ -19,11 +19,21 @@
     {{> google-analytics }}
   {{/if}}
 </head>
-<body>
 <body class="loaded">
   <div id="container">
     {{> body}}
+    <footer id="footer">
+      <p id="tools">
+        Built with
+        <a href="https://npmjs.com/">npm</a>,
+        <a href="http://assemble.io/">Assemble</a>,
+        <a href="http://babeljs.io/">Babel</a> and
+        <a href="http://gruntjs.com/">Grunt</a>.
+        Check the <a href="https://github.com/greenek/cv">source code</a>.
+      </p>
+    </footer>
   </div>
+  <a href="https://github.com/greenek/cv" id="programmers-porn" class="ribbon">Fork me on Github</a>
   <script src="{{assets}}/app.js"></script>
   {{#if development}}
   <script src="//localhost:35729/livereload.js"></script>

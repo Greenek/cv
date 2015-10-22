@@ -1,0 +1,152 @@
+@media screen and (max-width: (@device-sm-min - 1px)) {
+	body {
+		font-size: 14px;
+	}
+
+	#header {
+		font-size: inherit;
+
+		h1 {
+			font-size: 1.714em;
+		}
+
+		h2 {
+			font-size: 0.875em;
+		}
+
+		#me {
+			border-width: 3px;
+		}
+
+		p {
+			width: 100%;
+		}
+
+		ul {
+			font-size: inherit;
+
+			li {
+				margin-bottom: 1em;
+			}
+		}
+	}
+
+	#experience,
+	#skills,
+	#education,
+	#hobbies {
+		padding: 2.5em 0;
+
+		.wrapper {
+			width: 90%;
+		}
+
+		h3 {
+			font-size: 1.75em;
+			margin-bottom: 1.25em;
+			opacity: 0.5;
+			text-align: left;
+		}
+	}
+
+	#experience {
+		.wrapper > ul {
+			margin: 0;
+			padding: 0;
+
+			&:before,
+			&:after {
+				display: none;
+			}
+
+			> li {
+				&:nth-child(even),
+				&:nth-child(odd),
+				&:last-child {
+					float: none;
+					margin: 0 0 2.5em;
+					padding: 0;
+					text-align: left;
+					width: 100%;
+				}
+
+				ul {
+					padding-left: 1.428em;
+
+					li {
+						position: relative;
+
+						&:before {
+							color: rgba(0, 0, 0, 0.2);
+							content: '•';
+							position: absolute;
+							left: -1.142em;
+						}
+					}
+				}
+			}
+
+			h4 {
+				font-size: 1.25em;
+
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	#skills {
+		.wrapper > ul {
+			margin: 0;
+
+			> li {
+				float: none;
+
+				&,
+				&:first-child {
+					font-size: inherit;
+					padding: 0;
+
+					& ~ li {
+						padding: 0;
+						width: 100%;
+					}
+
+					h4 {
+						border-bottom-width: 2px;
+						font-size: 1.25em;
+					}
+				}
+			}
+
+			h4 {
+				font-size: 1.25em;
+				margin-top: 0;
+			}
+		}
+	}
+
+	#education {
+		.wrapper > ul {
+			padding: 0;
+
+			h4 {
+				& + p {
+					& + blockquote {
+						font-size: 1.25em;
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+
+	#hobbies {
+		font-size: inherit;
+	}
+
+	#programmers-porn {
+		display: none;
+	}
+}

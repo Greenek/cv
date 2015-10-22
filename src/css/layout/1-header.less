@@ -7,7 +7,7 @@
 	background-repeat: no-repeat;
 	background-size: cover !important;
 	color: #fff;
-	font-size: 22px;
+	font-size: 1.375em;
 	min-height: 100vh;
 	position: relative;
 	text-align: center;
@@ -43,33 +43,33 @@
 	}
 
 	h1 {
-		font-size: 72px;
+		font-size: 3.275em;
 		font-weight: 800;
-		letter-spacing: 2px;
+		letter-spacing: 0.027em;
 		margin-bottom: 0;
 	}
 
 	h2 {
 		color: rgba(255, 255, 255, 0.8);
-		font-size: 24px;
-		margin-bottom: 50px;
+		font-size: 1.09em;
+		margin-bottom: 2.77em;
 	}
 
 	p {
-		line-height: 30px;
-		margin: 0 auto 50px;
+		line-height: 1.875em;
+		margin: 0 auto 3.125em;
 		width: 70%;
 	}
 
 	ul {
-		font-size: 18px;
+		font-size: 0.818em;
 		list-style-type: none;
 		margin-bottom: 0;
 		padding: 0;
 
 		li {
 			display: inline-block;
-			margin: 0 12px;
+			margin: 0 0.875em;
 		}
 
 		a {
@@ -92,13 +92,13 @@
 		.fa-fw;
 
 		&:before {
-			margin-right: 7px;
+			margin-right: 0.4375em;
 			vertical-align: text-bottom;
 		}
 
 		&.home:before {
 			content: @fa-var-home;
-			margin-top: 2px;
+			margin-top: 0.125em;
 		}
 
 		&.at:before {
@@ -114,17 +114,16 @@
 /* Photo */
 
 #me {
-	@me-size: 250px;
-
 	background-color: #fff;
-	border: 7px solid #fff;
+	border: 0.4375em solid #fff;
 	border-radius: 50%;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 	display: block;
-	height: @me-size;
+	height: auto;
 	margin: 0 auto 1em;
+	max-width: 250px;
 	overflow: hidden;
-	width: @me-size;
+	width: 30%;
 	z-index: 10;
 
 	img {

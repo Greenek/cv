@@ -1,10 +1,18 @@
 ### Experience
 
++ #### LogZilla
+  _since March 2015_
+
+  - Building __LogZilla 5 front-end__ client.
+  - __Coordinating__ of an international developers team.
+  - Development and management of __automated build system__.
+
+  > *#AngularJS* *#JavaScript* *#HTML5* *#CSS3* *#LESS* *#Bootstrap* *#REST* *#NodeJS* *#Grunt* *#Bower* *#Git* *#Bamboo*
+
 + #### HOQS
-  _since December 2013_
+  _December 2013-March 2015_
 
   - Developed __large-scale web applications__ for company clients.
-  - __Coordinate__ of an international developers team.
   - Implemented a Facebook-integrated __game__ as a part of an ad campaign.
   - Built __tools__ for monitoring and testing internal systems.
   - Improved __software development workflow__ by introducing and implementing new tools.

@@ -1,26 +1,36 @@
 # Resume
-## Paweł Golonko <pgolonko@gmail.com>
+## Paweł Golonko <hi@panzielony.pl>
+
+Made with [Assemble](http://assemble.io/), [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/), [Grunt](http://gruntjs.com/) and [NPM](https://www.npmjs.com/).
 
 ***
 
 # Paweł Golonko
-## Senior Back End & Front End Web Developer
+## Senior Front End Web Developer
 
 Web developer with **over 10 years experience** in creating sites and **complex web applications**. Familiar with all phases of software development life cycle. Enthusiast of new technologies and clean code.
 
-+ <span class="icon home">[greenek.com](http://greenek.com)</span>
-+ <span class="icon email">[pgolonko@gmail.com](mailto:pgolonko@gmail.com)</span>
-+ <span class="icon phone">[(+48) 696-962-899](tel:48696962899)</span>
++ <span class="icon home"></span>[panzielony.pl](http://panzielony.pl)
++ <span class="icon at"></span>[hi@panzielony.pl](mailto:hi@panzielony.pl)
++ <span class="icon linkedin"></span>[/in/pawelgolonko](https://linkedin.com/in/pawelgolonko)
 
 ***
 
 ### Experience
 
++ #### LogZilla
+  _since March 2015_
+
+  - Building __LogZilla 5 front-end__ client.
+  - __Coordinating__ of an international developers team.
+  - Development and management of __automated build system__.
+
+  > *#AngularJS* *#JavaScript* *#HTML5* *#CSS3* *#LESS* *#Bootstrap* *#REST* *#NodeJS* *#Grunt* *#Bower* *#Git* *#Bamboo*
+
 + #### HOQS
-  _since December 2013_
+  _December 2013-March 2015_
 
   - Developed __large-scale web applications__ for company clients.
-  - __Coordinate__ of an international developers team.
   - Implemented a Facebook-integrated __game__ as a part of an ad campaign.
   - Built __tools__ for monitoring and testing internal systems.
   - Improved __software development workflow__ by introducing and implementing new tools.
@@ -138,10 +148,6 @@ Web developer with **over 10 years experience** in creating sites and **complex 
 + #### Audio-Visual Art
 
   Coding generative, sound-reactive visuals using Processing.
-
-+ #### Video Games
-
-+ #### Music
 
 + #### Cats :)
 

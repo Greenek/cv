@@ -8,10 +8,6 @@
 
   Coding generative, sound-reactive visuals using Processing.
 
-+ #### Video Games
-
-+ #### Music
-
 + #### Cats :)
 
   Proud owner of three and provider of temporary home for a kitties from [Stawiamy na łapy](https://www.facebook.com/stawiamynalapy) foundation.

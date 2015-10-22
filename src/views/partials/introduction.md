@@ -1,5 +1,5 @@
 <!--
-Hello $guess.name!
+Hello $guest.name!
 I'm glad to see you here :) If you want to learn more about
 how it's made, please check the repository:
 

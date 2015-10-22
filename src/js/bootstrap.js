@@ -18,7 +18,7 @@ export function run() {
   body = document.querySelector('body');
 
   // Remove `loaded` class
-  body.setAttribute('class', body.getAttribute('class').replace('loaded', ''));
+  body.classList.remove('loaded');
 
   // Print some info for curious
   about = document.querySelector('html').childNodes[0];
@@ -42,7 +42,7 @@ export function run() {
 
   // Load all images, then set class `loaded` to the body
   Promise.all(loadingQueue).then(value => {
-    body.setAttribute('class', (body.getAttribute('class') + ' loaded').trim());
+    body.classList.add('loaded');
   });
 
   // Open all `nofollow` links in the new tab
@@ -53,10 +53,30 @@ export function run() {
   // Initialize stylesSwitcher
   stylesSwitcher = new StylesSwitcher();
 
-  window.setMarkdownMode = function setMarkdownMode(status) {
+  window.setMarkdownMode = status => {
     let styleName = status ? 'markdown' : 'default';
     stylesSwitcher.setStyle(styleName);
   };
 }
 
 NodeList.prototype.forEach = Array.prototype.forEach;
+
+/**
+ * Force trigger window event.
+ *
+ * @param  {String}    typeArg    defining the name of event.
+ * @param  {EventInit} eventInit  dictionary, having the following fields:
+ *                                - "bubbles", optional and defaulting to false,
+ *                                  of type Boolean, indicating if the event
+ *                                  bubbles or not.
+ *                                - "cancelable", optional and defaulting to
+ *                                  false, of type Boolean, indicating if the
+ *                                  event can be canceled or not.
+ */
+window.trigger = function(typeArg, eventInit) {
+  var event = new Event(typeArg, eventInit);
+  var canceled = !window.dispatchEvent(event);
+
+  return canceled;
+};
+

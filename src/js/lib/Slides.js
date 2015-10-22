@@ -1,33 +1,38 @@
 export default function() {
-  var evt;
   var slides = document.querySelectorAll('.slide');
   var breakpoints = [];
+  var breakpointIndex = 0;
 
-  window.addEventListener('resize', event => {
-    breakpoints = [].map.call(slides, elem => {
-      return elem.offsetTop;
-    });
-
-    window.trigger('scroll');
-  });
-
-  window.addEventListener('scroll', event => {
-    console.log(event);
-  });
-
+  window.addEventListener('resize', onResize);
   window.trigger('resize');
 
   return slides;
+
+  function onResize(event) {
+    // Get breakpoints, when next slide is showing up
+    breakpoints = [].map.call(slides, elem => {
+      return elem.offsetTop - window.innerHeight;
+    });
+
+    // Bind onScroll event
+    window.addEventListener('scroll', onScroll);
+
+    // `onScroll` event is triggered only when scrollY is not 0
+    if (window.scrollY === 0) {
+      window.trigger('scroll');
+    }
+  }
+
+  function onScroll(event) {
+    while (breakpoints[breakpointIndex + 1] < window.scrollY) {
+      slides[breakpointIndex].classList.add('slide-enter-end', 'slide-enter');
+
+      if (++breakpointIndex === breakpoints.length) {
+        window.removeEventListener('scroll', onScroll);
+        return;
+      }
+    }
+
+    slides[breakpointIndex].classList.add('slide-enter');
+  }
 }
-
-window.trigger = function(type, canBubble, cancelable, view, detail) {
-  var event = window.document.createEvent('UIEvents');
-
-  canBubble = canBubble || true;
-  cancelable = cancelable || false;
-  view = view || window;
-  detail = detail || 0;
-
-  event.initUIEvent(type, canBubble, cancelable, view, detail);
-  window.dispatchEvent(event);
-};

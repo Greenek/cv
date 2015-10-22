@@ -6,6 +6,25 @@
 	min-height: 100vh;
 	position: relative;
 
+	.wrapper {
+		opacity: 0;
+		transform: translateY(25px);
+		transition: all 0.5s 0.2s ease-in;
+	}
+
+	&.slide-enter {
+		.wrapper {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	&.slide-enter-end {
+		.wrapper {
+			transition-duration: 0s !important;
+		}
+	}
+
 	h3:first-child {
 		margin-top: 0;
 	}

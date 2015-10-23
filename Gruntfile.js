@@ -3,11 +3,6 @@ module.exports = function(grunt) {
 
   var pkg = require('./package.json');
 
-  // Initialize default options
-  grunt.option.init({
-    staging: false
-  });
-
   // Load grunt tasks
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-browserify');
@@ -18,9 +13,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-dom-massager');
+  grunt.loadNpmTasks('grunt-prettify');
 
   // Get target
-  var target = grunt.option('staging') || 'dev';
+  var isDev = (grunt.option('staging') !== 'production');
 
   // Tasks config
   grunt.initConfig({
@@ -29,7 +25,7 @@ module.exports = function(grunt) {
     assemble: {
       options: {
         assets: 'public/assets',
-        development: grunt.option('no-staging'),
+        development: isDev,
         flatten: true,
         layout: 'default-layout.hbs',
         layoutdir: 'src/views/layouts/',
@@ -38,7 +34,7 @@ module.exports = function(grunt) {
           smartypants: true
         },
         partials: 'src/views/partials/**/*.md',
-        production: grunt.option('staging')
+        production: !isDev
       },
       pages: {
         files: {
@@ -54,7 +50,13 @@ module.exports = function(grunt) {
         },
         options: {
           browserifyOptions: {
-            debug: grunt.option('no-staging')
+            debug: isDev,
+            plugin: [
+              ['minifyify', {
+                map: isDev,
+                minify: !isDev
+              }]
+            ]
           },
           transform: [
             ['babelify', {'stage': 0}]
@@ -121,14 +123,15 @@ module.exports = function(grunt) {
         }
       },
       files: {
-        src: 'public/index.html',
-        dest: 'public/'
+        src: '.tmp/index.html',
+        dest: '.tmp/'
       }
     },
 
     less: {
       development: {
         options: {
+          compress: !isDev,
           paths: [
             'node_modules',
             'src/css'
@@ -136,7 +139,8 @@ module.exports = function(grunt) {
           plugins: [
             new(require('less-plugin-autoprefix'))({
               browsers: ['last 2 versions']
-            })
+            }),
+            new(require('less-plugin-clean-css'))({})
           ]
         },
         files: [
@@ -148,6 +152,13 @@ module.exports = function(grunt) {
             ext: '.css'
           }
         ],
+      }
+    },
+
+    prettify: {
+      files: {
+        src: 'public/index.html',
+        dest: 'public/index.html'
       }
     },
 
@@ -214,6 +225,7 @@ module.exports = function(grunt) {
     'less',
     'assemble',
     'dom_massager',
+    'prettify',
     'clean:tmp'
   ]);
 

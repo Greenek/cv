@@ -8,20 +8,12 @@
 
 	.wrapper {
 		opacity: 0;
-		transform: translateY(25px);
-		transition: all 0.5s 0.2s ease-in;
-	}
+		transform: translateY(15px);
+		transition: all 0.85s 0.2s ease-out;
 
-	&.slide-enter {
-		.wrapper {
+		.loaded & {
 			opacity: 1;
 			transform: translateY(0);
-		}
-	}
-
-	&.slide-enter-end {
-		.wrapper {
-			transition-duration: 0s !important;
 		}
 	}
 

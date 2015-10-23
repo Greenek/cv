@@ -29,10 +29,12 @@ export default function() {
 
       if (++breakpointIndex === breakpoints.length) {
         window.removeEventListener('scroll', onScroll);
-        return;
+        break;
       }
     }
 
-    slides[breakpointIndex].classList.add('slide-enter');
+    if (breakpoints[breakpointIndex] < window.scrollY) {
+      slides[breakpointIndex].classList.add('slide-enter');
+    }
   }
 }

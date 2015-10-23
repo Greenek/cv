@@ -123,8 +123,8 @@ module.exports = function(grunt) {
         }
       },
       files: {
-        src: '.tmp/index.html',
-        dest: '.tmp/'
+        src: 'public/index.html',
+        dest: 'public/'
       }
     },
 

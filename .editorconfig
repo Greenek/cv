@@ -1,19 +1,12 @@
-# http://editorconfig.org
-
 root = true
 
 [*]
-charset = utf-8
-end_of_line = lf
 indent_style = space
 indent_size = 2
-insert_final_newline = false
+end_of_line = lf
+charset = utf-8
 trim_trailing_whitespace = true
-
-[*.{html,css,less}]
-indent_style = tab
-indent_size = 4
-insert_final_newline = false
-
-[*.js]
 insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false

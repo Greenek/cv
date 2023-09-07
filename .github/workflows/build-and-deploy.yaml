@@ -1,8 +1,7 @@
 name: Build and Deploy
 on:
   push:
-    tags:
-      - '*'
+    branches: [ "2023" ]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

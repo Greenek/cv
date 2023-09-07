@@ -1,0 +1,10 @@
+.env
+
+/public/build/
+/public/g/
+/node_modules/
+/tmp/
+
+/.vscode/
+
+.DS_Store

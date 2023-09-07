@@ -1,0 +1,196 @@
+@use 'reset.css/reset.css';
+@import 'theme';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family-monospace;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+main,
+footer {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+
+  h2 {
+    border-bottom: 5px solid lighten($heading-color, 10%);
+    display: inline-block;
+    font-size: 2em;
+    letter-spacing: 0.05em;
+    margin: 0 0 1.25em;
+    text-align: center;
+    text-shadow: 4px 4px 0 darken($heading-color, 40%);
+  }
+
+  h3 {
+    color: $text-color;
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin-top: 1.8em;
+
+    &::before {
+      color: $heading-color;
+      content: '###';
+    }
+  }
+
+  h4 {
+    color: lighten($heading-color, 10%);
+
+    &::before {
+      content: '====';
+      opacity: 0.6;
+    }
+  }
+
+  h3,
+  h4 {
+    &::before {
+      display: inline-block;
+      margin-right: 0.5rem;
+      width: 2.75rem;
+    }
+  }
+
+  h5 {
+    font-size: 0.875em;
+  }
+
+  h2,
+  h5 {
+    + h3 {
+      margin-top: 0;
+    }
+  }
+
+  p,
+  blockquote,
+  ul,
+  ol {
+    margin: 1em 0;
+  }
+
+  blockquote {
+    color: darken($text-color, 10%);
+    font-style: italic;
+    padding-left: 1em;
+    position: relative;
+
+    p::before {
+      content: '>';
+      margin-left: -1em;
+      position: absolute;
+    }
+  }
+
+  /* Lists */
+
+  ul,
+  ol {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin: 0 0 0.5em;
+    }
+  }
+
+  ul {
+    margin-left: 1.6em;
+
+    > li {
+      &::before {
+        color: $list-color;
+        content: '+';
+        float: left;
+        margin-left: -1.3em;
+      }
+
+      > ul {
+        margin-left: 1.5em;
+
+        > li {
+          &::before {
+            content: '-';
+          }
+        }
+      }
+    }
+  }
+
+  /* Inline elements */
+
+  a {
+    color: $string-color;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($string-color, 10%);
+
+      &::before,
+      &::after {
+        color: lighten($link-color, 12%);
+      }
+    }
+
+    &::before,
+    &::after {
+      color: $link-color;
+    }
+
+    &::before {
+      content: '[';
+    }
+
+    &::after {
+      content: '](' attr(href) ')';
+    }
+  }
+
+  strong {
+    color: $list-color;
+
+    &::before,
+    &::after {
+      content: '*';
+    }
+  }
+
+  em {
+    color: $italic-color;
+
+    &::before,
+    &::after {
+      content: '_';
+    }
+  }
+
+  code {
+    color: $link-color;
+
+    &::before,
+    &::after {
+      color: $list-color;
+      content: '`';
+    }
+  }
+}

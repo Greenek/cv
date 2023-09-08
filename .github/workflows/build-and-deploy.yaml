@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         with:
           persist-credentials: false
 
@@ -22,6 +24,8 @@ jobs:
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.5
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         with:
           GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
           REPOSITORY_NAME: Greenek/greenek.github.io

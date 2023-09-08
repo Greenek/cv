@@ -25,5 +25,5 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
           REPOSITORY_NAME: Greenek/greenek.github.io
-          BRANCH: 2023
+          BRANCH: gh-pages
           FOLDER: public

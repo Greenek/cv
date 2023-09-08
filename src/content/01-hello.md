@@ -10,5 +10,5 @@ Geek in love with coding, sound, and visuals, preferably at the same time.
 ### Follow
 
 - [github.com/Greenek](https://github.com/Greenek)
-- [dribble.com/Greenek](https://dribbble.com/Greenek)
+- [dribbble.com/Greenek](https://dribbble.com/Greenek)
 - [/in/pawelgolonko](https://linkedin.com/in/pawelgolonko)

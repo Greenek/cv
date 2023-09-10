@@ -1,6 +1,6 @@
 ## Experience
 
-- ##### November 2023 – present
+- ##### November 2022 – present
 
   ### Aize
 
@@ -15,7 +15,7 @@
 
   > _Angular_ _Typescript_ _D3_ _NX_ _Storybook_ _GitLab_ _Figma_
 
-- ##### May 2019 – October 2023
+- ##### May 2019 – October 2022
 
   ### Circle K Business Centre / Madiff
 

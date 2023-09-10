@@ -130,11 +130,27 @@
       const ctx = canvas.getContext('2d');
 
       // Setup font
-      const styles = parentElement.computedStyleMap();
-      const font = ['font-weight', 'font-size', 'font-family']
-        .map((key) => styles.get(key))
-        .join(' ');
-      this.#backgroundColor = styles.get('background-color');
+      let font;
+
+      if ('computedStyleMap' in parentElement) {
+        // Chrome
+        const styles = parentElement.computedStyleMap();
+
+        font = ['font-weight', 'font-size', 'font-family'].map((key) =>
+          styles.get(key)
+        );
+        this.#backgroundColor = styles.get('background-color');
+      } else {
+        // Firefox
+        const styles = window.getComputedStyle(parentElement);
+
+        font = ['font-weight', 'font-size', 'font-family'].map((key) =>
+          styles.getPropertyValue(key)
+        );
+        this.#backgroundColor = styles.getPropertyValue('background-color');
+      }
+
+      font = font.join(' ');
 
       // Calculate width and height
       ctx.font = font;

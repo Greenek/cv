@@ -41,7 +41,7 @@
 </main>
 
 <footer id="footer">
-  <svelte:component this={Footer} />
+  <Footer />
 </footer>
 
 <ForkMe />
@@ -50,7 +50,7 @@
   @import '../styles/global';
 
   #me {
-    max-width: 100%;
+    width: 100%;
   }
 
   #footer {

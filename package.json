@@ -34,7 +34,7 @@
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
     "autoprefixer": "^10.4.15",
-    "postcss": "^8.4.29",
+    "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "rollup": "^3.29.0",
     "rollup-plugin-css-only": "^4.3.0",

@@ -2,12 +2,10 @@
 
 .svelte-kit
 
+/build
 /dist
-/public/build/
-/public/g/
-/node_modules/
-/tmp/
+/node_modules
 
-/.vscode/
+/.vscode
 
 .DS_Store

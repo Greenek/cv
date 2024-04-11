@@ -30,4 +30,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}
           REPOSITORY_NAME: Greenek/greenek.github.io
           BRANCH: gh-pages
-          FOLDER: public
+          FOLDER: build

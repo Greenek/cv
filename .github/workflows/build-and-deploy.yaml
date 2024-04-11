@@ -1,7 +1,7 @@
 name: Build and Deploy
 on:
   push:
-    branches: [ "2023" ]
+    branches: ['2023']
   workflow_call:
     secrets:
       API_TOKEN_GITHUB:

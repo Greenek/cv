@@ -4,11 +4,13 @@ const markdownPath = './src/content';
 
 function getFiles(path) {
   const fileList = fs.readdirSync(path);
-  
+
   return fileList.map((file) => {
     const content = fs.readFileSync(`${path}/${file}`, 'utf8');
 
-    return content.replace(/<style.*>[\w\W]{1,}(.*?)[\w\W]{1,}<\/style>/gmi, '').replace(/^[\n]*/g, '');
+    return content
+      .replace(/<style.*>[\w\W]{1,}(.*?)[\w\W]{1,}<\/style>/gim, '')
+      .replace(/^[\n]*/g, '');
   });
 }
 

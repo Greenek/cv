@@ -4,7 +4,7 @@
 
 and I'm a web developer.
 
-***
+---
 
 ## About me
 
@@ -21,7 +21,7 @@ Geek in love with coding, sound, and visuals, preferably at the same time.
 - [dribble.com/Greenek](https://dribbble.com/Greenek)
 - [/in/pawelgolonko](https://linkedin.com/in/pawelgolonko)
 
-***
+---
 
 ## Experience
 
@@ -155,7 +155,7 @@ Geek in love with coding, sound, and visuals, preferably at the same time.
 
   ### Born
 
-***
+---
 
 ## Skills
 
@@ -189,7 +189,7 @@ Geek in love with coding, sound, and visuals, preferably at the same time.
 - English (fluent),
 - Norwegian (basic).
 
-***
+---
 
 ## Education
 
@@ -203,7 +203,7 @@ Implemented algorithms for real-time analysis of images captured by web camera t
 
 > _#Java_ _#JavaCV_
 
-***
+---
 
 ## After Hours
 
@@ -219,7 +219,7 @@ Exploring magical world of creating sounds inspired by drum and bass and rap mus
 
 Exploring the beauty of Norway.
 
-***
+---
 
 Built with **Svelte** and **Markdown**.
 

@@ -1,7 +1,7 @@
 <a href="https://github.com/Greenek/cv">Fork me on GitHub</a>
 
 <style lang="scss">
-  @import '../styles/theme.scss';
+  @import '$lib/styles/theme';
 
   a {
     background-color: lighten($background-color, 3%);

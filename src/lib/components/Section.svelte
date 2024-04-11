@@ -1,5 +1,5 @@
 <script>
-  import { reveal } from '../actions/reveal';
+  import { reveal } from '../actions/reveal.js';
 
   export let id;
 </script>
@@ -11,7 +11,7 @@
 </section>
 
 <style lang="scss">
-  @import '../styles/theme.scss';
+  @import '$lib/styles/theme';
 
   .slide {
     align-items: center;
@@ -28,7 +28,9 @@
   .wrapper {
     max-width: 85vw;
     opacity: 0;
-    transition: opacity 0.5s, transform 1s;
+    transition:
+      opacity 0.5s,
+      transform 1s;
     transition-timing-function: ease-out;
     transform: translateY(50px);
     width: 800px;

@@ -1,5 +1,8 @@
 .env
 
+.svelte-kit
+
+/dist
 /public/build/
 /public/g/
 /node_modules/

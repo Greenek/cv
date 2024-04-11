@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import Header from '../content/00-header.md';
-  import { figletText } from '../utils/figlet';
+  import { PageHeaderAscii } from '$lib/utils/ascii.js';
 
   let header;
 
@@ -38,7 +38,7 @@
         0,
         0,
         this.#ctx.canvas.width,
-        this.#ctx.canvas.height
+        this.#ctx.canvas.height,
       );
 
       this.#ctx.fillStyle = this.#backgroundColor;
@@ -59,13 +59,13 @@
       this.#ctx.canvas.previousElementSibling.style.backgroundImage =
         this.#getGradient(
           0,
-          this.#ctx.canvas.previousElementSibling.textContent.trim().length
+          this.#ctx.canvas.previousElementSibling.textContent.trim().length,
         );
 
       this.#ctx.canvas.nextElementSibling.style.backgroundImage =
         this.#getGradient(
           this.#shape.length,
-          this.#ctx.canvas.nextElementSibling.textContent.trim().length
+          this.#ctx.canvas.nextElementSibling.textContent.trim().length,
         );
     }
 
@@ -97,7 +97,7 @@
         {
           rootMargin: '100% 0px 100% 0px',
           threshold: [0.01, 0.99],
-        }
+        },
       );
 
       observer.observe(node);
@@ -119,7 +119,7 @@
       const title = h1.textContent.trim();
 
       // Convert title to ascii art
-      this.#shape = figletText(title).split('\n');
+      this.#shape = PageHeaderAscii.split('\n');
 
       // Create canvas
       const canvas = document.createElement('canvas');
@@ -137,7 +137,7 @@
         const styles = parentElement.computedStyleMap();
 
         font = ['font-weight', 'font-size', 'font-family'].map((key) =>
-          styles.get(key)
+          styles.get(key),
         );
         this.#backgroundColor = styles.get('background-color');
       } else {
@@ -145,7 +145,7 @@
         const styles = window.getComputedStyle(parentElement);
 
         font = ['font-weight', 'font-size', 'font-family'].map((key) =>
-          styles.getPropertyValue(key)
+          styles.getPropertyValue(key),
         );
         this.#backgroundColor = styles.getPropertyValue('background-color');
       }
@@ -187,7 +187,7 @@
 </header>
 
 <style lang="scss">
-  @import '../styles/theme.scss';
+  @import '$lib/styles/theme';
 
   header {
     align-items: center;

@@ -15,9 +15,9 @@
 
       gtag('config', 'UA-181458-4');
     </script>
-
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Paweł Golonko • Resume</title>
     <meta
       name="description"
@@ -39,10 +39,9 @@
     <meta property="og:profile:last_name" content="Golonko" />
     <meta property="og:profile:username" content="Greenek" />
     <meta property="og:profile:gender" content="male" />
-
-    <link href="/build/bundle.css" rel="stylesheet" />
-
-    <script defer src="/build/bundle.js"></script>
+    %sveltekit.head%
   </head>
-  <body></body>
+  <body data-sveltekit-preload-data="hover">
+    <div>%sveltekit.body%</div>
+  </body>
 </html>

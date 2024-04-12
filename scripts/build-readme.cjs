@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const markdownPath = './src/content';
+const markdownPath = './src/lib/content';
 
 function getFiles(path) {
   const fileList = fs.readdirSync(path);
@@ -10,10 +10,10 @@ function getFiles(path) {
 
     return content
       .replace(/<style.*>[\w\W]{1,}(.*?)[\w\W]{1,}<\/style>/gim, '')
-      .replace(/^[\n]*/g, '');
+      .replace(/(^[\n]*|[\n]*$)/g, '');
   });
 }
 
 const files = getFiles(markdownPath);
 
-fs.writeFileSync('./README.md', files.join('\n***\n\n'));
+fs.writeFileSync('./README.md', files.join('\n\n---\n\n') + '\n');

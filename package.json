@@ -18,9 +18,11 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "build-readme": "node scripts/build-readme.cjs",
     "preview": "vite preview",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
+    "preversion": "npm run build-readme",
     "postversion": "echo $(git push --tags)"
   },
   "dependencies": {

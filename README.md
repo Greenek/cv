@@ -8,7 +8,7 @@ and I'm a web developer.
 
 ## About me
 
-Web developer with **over 19 years' experience** in creating a wide variety of web solutions, from small business websites to **complex e-commerce platforms** and **enterprise applications** used by specialists around the world. Familiar with all phases of the software development lifecycle. Finds Zen in the aesthetic code.
+Web developer with **20 years' experience** in creating a wide variety of web solutions, from small business websites to **complex e-commerce platforms** and **enterprise applications** used by specialists around the world. Familiar with all phases of the software development lifecycle. Finds Zen in the aesthetic code.
 
 Geek in love with coding, sound, and visuals, preferably at the same time.
 
@@ -18,29 +18,40 @@ Geek in love with coding, sound, and visuals, preferably at the same time.
 ### Follow
 
 - [github.com/Greenek](https://github.com/Greenek)
-- [dribble.com/Greenek](https://dribbble.com/Greenek)
+- [dribbble.com/Greenek](https://dribbble.com/Greenek)
 - [/in/pawelgolonko](https://linkedin.com/in/pawelgolonko)
 
 ---
 
 ## Experience
 
-- ##### November 2023 – present
+- ##### February 2024 – present
+
+  ### CURRENT ECO
+
+  #### Principal Frontend Engineer
+
+  Developing a **Charge Point Management System** and a mobile application to facilitate the management and operation of EV chargers.
+
+  > _Angular_ _Ionic_ _Cordova_ _Typescript_ _NgRx_ _NX_ _Vercel_ _Bitbucket_ _OCPP_
+
+- ##### November 2022 – January 2024
 
   ### Aize
 
   #### Principal Software Engineer
 
-  Leading the development of the **Design System and Data Visualization** libraries used in Aize applications.
+  Lead the development of the **Design System and Data Visualization** libraries used in Aize applications.
 
-  - Crafting a **unified and consistent user experience** across products by creating and refining design patterns, components, and guidelines.
-  - **Collaborating with cross-functional teams**, including designers, developers, and product managers, to ensure efficient and cohesive development processes.
-  - Contributing to **enhancing the quality and usability** of Aize products.
-  - **Mentoring and guiding** fellow engineers, cultivating a culture of collaboration.
+  - Crafted a **unified and consistent user experience** across products by creating and refining design patterns, components, and guidelines.
+  - **Collaborated with cross-functional teams**, including designers, developers, and product managers, to ensure efficient and cohesive development processes.
+  - Contributed to **enhancing the quality and usability** of Aize products.
+  - Created a script
+  - **Mentored and guided** fellow engineers, cultivating a culture of collaboration.
 
-  > _Angular_ _Typescript_ _D3_ _NX_ _Storybook_ _GitLab_ _Figma_
+  > _Angular_ _Typescript_ _D3_ _Node_ _NX_ _Storybook_ _ZeroHeight_ _GitLab_ _Figma_
 
-- ##### May 2019 – October 2023
+- ##### May 2019 – October 2022
 
   ### Circle K Business Centre / Madiff
 
@@ -213,7 +224,7 @@ Translating sound into image with audio-reactive code and live video mixing.
 
 ### Music production
 
-Exploring magical world of creating sounds inspired by drum and bass and rap music.
+Exploring magical world of producing electronic music. You can find me at [Spotify](https://open.spotify.com/artist/5tdW98UeseeqprXwXAH9DY?si=UGfifZoKQDWUKyA_4p6vKg).
 
 ### Nature
 

@@ -1,7 +1,7 @@
 name: Build and Deploy
 on:
-  push:
-    branches: ['2024']
+  release:
+    types: [published]
   workflow_call:
     secrets:
       API_TOKEN_GITHUB:
@@ -19,7 +19,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm install --legacy-peer-deps
+          npm install
           npm run build
 
       - name: Deploy 🚀

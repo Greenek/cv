@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "reset.css": "^2.0.2",
-    "svelte": "^4.2.13"
+    "svelte": "^4.2.19"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.1",

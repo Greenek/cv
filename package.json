@@ -42,7 +42,7 @@
     "prettier": "^3.2.5",
     "prettier-plugin-svelte": "^3.2.2",
     "sass": "^1.74.1",
-    "vite": "^5.2.8",
+    "vite": "^5.2.14",
     "vite-plugin-svelte-md": "^0.1.7"
   },
   "browserslist": "last 2 versions",

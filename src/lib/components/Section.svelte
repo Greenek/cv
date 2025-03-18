@@ -11,7 +11,8 @@
 </section>
 
 <style lang="scss">
-  @import '$lib/styles/theme';
+  @use 'sass:color';
+  @use '$lib/styles/theme';
 
   .slide {
     align-items: center;
@@ -21,7 +22,7 @@
     padding: 4em 0;
 
     &:nth-child(2n) {
-      background-color: lighten($background-color, 1%);
+      background-color: color.adjust(theme.$background-color, $lightness: 1%);
     }
   }
 

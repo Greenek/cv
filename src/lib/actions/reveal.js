@@ -11,7 +11,7 @@ export function reveal(node) {
     },
     {
       rootMargin: '0px 0px 50px 0px',
-    },
+    }
   );
 
   observer.observe(node);

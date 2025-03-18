@@ -22,7 +22,7 @@
 <Intro />
 
 <main>
-  {#each sections as section}
+  {#each sections as section (section.id)}
     <Section id={section.id}>
       <svelte:component this={section.component} />
     </Section>
@@ -38,14 +38,16 @@
 <ForkMe />
 
 <style lang="scss" global>
-  @import '$lib/styles/theme';
+  @use 'sass:color';
+  @use '$lib/styles/theme';
 
   #me {
+    height: auto;
     width: 100%;
   }
 
   #footer {
-    background-color: darken($background-color, 2%);
+    background-color: color.adjust(theme.$background-color, $lightness: -2%);
     font-size: 0.875em;
     padding-block: 3em;
     text-align: center;

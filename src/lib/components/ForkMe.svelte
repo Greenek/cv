@@ -1,10 +1,11 @@
 <a href="https://github.com/Greenek/cv">Fork me on GitHub</a>
 
 <style lang="scss">
-  @import '$lib/styles/theme';
+  @use 'sass:color';
+  @use '$lib/styles/theme';
 
   a {
-    background-color: lighten($background-color, 3%);
+    background-color: color.adjust(theme.$background-color, $lightness: 3%);
     color: #fff;
     font-size: 0.7em;
     opacity: 0.5;

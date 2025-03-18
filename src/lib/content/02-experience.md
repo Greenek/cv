@@ -142,13 +142,14 @@
   ### Born
 
 <style lang="scss">
-  @import '../styles/theme.scss';
+  @use 'sass:color';
+  @use '../styles/theme.scss';
 
   #experience .markdown-body > ul {
     position: relative;
 
     &::before {
-      background-color: lighten($background-color, 5%);
+      background-color: color.adjust(theme.$background-color, $lightness: 5%);
       bottom: 0;
       content: ' ';
       left: 20%;
@@ -174,12 +175,12 @@
       }
 
       > h5 {
-        background: darken($heading-color, 2%);
+        background: color.adjust(theme.$heading-color, $lightness: -2%);
         border-radius: 8px;
         padding: 2px 10px;
         position: absolute;
         right: 104%;
-        text-shadow: 0 1px darken($heading-color, 30%);
+        text-shadow: 0 1px color.adjust(theme.$heading-color, $lightness: -30%);
         white-space: nowrap;
       }
 

@@ -6,18 +6,18 @@ const config = {
   extensions: ['.svelte', '.md'],
   kit: {
     adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: undefined,
-			precompress: false,
-			strict: true
-		}),
+      pages: 'build',
+      assets: 'build',
+      fallback: undefined,
+      precompress: false,
+      strict: true,
+    }),
     prerender: {
       crawl: true,
       handleHttpError: ({ _path, _referrer, message }) => {
-				throw new Error(message);
-			}
-    }
+        throw new Error(message);
+      },
+    },
   },
   preprocess: [vitePreprocess()],
 };

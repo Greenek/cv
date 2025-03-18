@@ -8,7 +8,7 @@ and I'm a web developer.
 
 ## About me
 
-Web developer with **20 years' experience** in creating a wide variety of web solutions, from small business websites to **complex e-commerce platforms** and **enterprise applications** used by specialists around the world. Familiar with all phases of the software development lifecycle. Finds Zen in the aesthetic code.
+Web developer with **21 years' experience** in creating a wide variety of web solutions, from small business websites to **complex e-commerce platforms** and **enterprise applications** used by specialists around the world. Familiar with all phases of the software development lifecycle. Finds Zen in the aesthetic code.
 
 Geek in love with coding, sound, and visuals, preferably at the same time.
 
@@ -29,11 +29,17 @@ Geek in love with coding, sound, and visuals, preferably at the same time.
 
   ### CURRENT ECO
 
-  #### Principal Frontend Engineer
+  #### Principal Front-end Engineer
 
-  Developing a **Charge Point Management System** and a mobile application to facilitate the management and operation of EV chargers.
+  Building one of the most advanced **Charge Point Management Systems**.
 
-  > _Angular_ _Ionic_ _Cordova_ _Typescript_ _NgRx_ _NX_ _Vercel_ _Bitbucket_ _OCPP_
+  - Leading **front-end architecture design** for an enterprise-level charging management system.
+  - Developing a **complex dashboard** to facilitate the management and operation of EV chargers for charging location operators.
+  - Optimizing the application for **performance and accessibility**, reducing load times by 30% and improving responsiveness.
+  - Integrating EV-specific protocols like **OCPP** for real-time charger communication.
+  - Developing **mobile applications** for EV drivers to find and use charging stations.
+
+  > _Angular_ _Ionic_ _Capacitor_ _Typescript_ _GraphQL_ _NgRx_ _NX_ _Vercel_ _Bitbucket_ _OCPP_
 
 - ##### November 2022 – January 2024
 
@@ -224,7 +230,7 @@ Translating sound into image with audio-reactive code and live video mixing.
 
 ### Music production
 
-Exploring magical world of producing electronic music. You can find me at [Spotify](https://open.spotify.com/artist/5tdW98UeseeqprXwXAH9DY?si=UGfifZoKQDWUKyA_4p6vKg).
+Exploring magical world of producing electronic music. You can find me at [Spotify](https://open.spotify.com/artist/5tdW98UeseeqprXwXAH9DY).
 
 ### Nature
 

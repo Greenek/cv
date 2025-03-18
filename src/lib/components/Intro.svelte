@@ -192,8 +192,9 @@
     display: flex;
     flex-direction: column;
     font-size: 1.25em;
+    height: 80vh;
     justify-content: flex-end;
-    min-height: 80vh;
+    max-height: 800px;
     padding: 3em;
 
     .wrapper {

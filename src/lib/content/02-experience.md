@@ -4,11 +4,17 @@
 
   ### CURRENT ECO
 
-  #### Principal Frontend Engineer
+  #### Principal Front-end Engineer
 
-  Developing a **Charge Point Management System** and a mobile application to facilitate the management and operation of EV chargers.
+  Building one of the most advanced **Charge Point Management Systems**.
 
-  > _Angular_ _Ionic_ _Cordova_ _Typescript_ _NgRx_ _NX_ _Vercel_ _Bitbucket_ _OCPP_
+  - Leading **front-end architecture design** for an enterprise-level charging management system.
+  - Developing a **complex dashboard** to facilitate the management and operation of EV chargers for charging location operators.
+  - Optimizing the application for **performance and accessibility**, reducing load times by 30% and improving responsiveness.
+  - Integrating EV-specific protocols like **OCPP** for real-time charger communication.
+  - Developing **mobile applications** for EV drivers to find and use charging stations.
+
+  > _Angular_ _Ionic_ _Capacitor_ _Typescript_ _GraphQL_ _NgRx_ _NX_ _Vercel_ _Bitbucket_ _OCPP_
 
 - ##### November 2022 – January 2024
 
@@ -176,8 +182,8 @@
 
       > h5 {
         background: color.adjust(theme.$heading-color, $lightness: -2%);
-        border-radius: 8px;
-        padding: 2px 10px;
+        border-radius: 18px;
+        padding: 2px 14px;
         position: absolute;
         right: 104%;
         text-shadow: 0 1px color.adjust(theme.$heading-color, $lightness: -30%);
